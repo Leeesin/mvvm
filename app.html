@@ -24,6 +24,9 @@
     new Vue({
         el: '#app',
         data: {
+            obj: {
+                number: 0,
+            },
             number: 0,
             count: 0,
             demo: 0,
@@ -31,12 +34,6 @@
         methods: {
             increment: function () {
                 this.number++;
-            },
-            incre: function () {
-                this.count++;
-            },
-            test: function () {
-                this.demo += 100;
             },
         }
     })

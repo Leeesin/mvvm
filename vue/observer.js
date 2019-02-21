@@ -4,7 +4,7 @@ const observer = (vm, obj) => {
         vm.dep[key] = []
         let value = obj[key]
         // 先只考虑object 不考虑数组
-        typeof value === 'object' ? vm._observe(value) : ''
+        typeof value === 'object' ? observer(vm, value) : ''
         let binding = vm.dep[key];
         Object.defineProperty(vm.$data, key, {
             enumerable: true,

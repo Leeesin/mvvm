@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text"
+               v-model="number">
+        <button type="button"
+                v-click="increment">增加</button>
+        <h3 v-bind="number"></h3>
+    </div>
+</body>
+<script type="module">
+    import Vue from "./vue/index.js";
+    new Vue({
+        el: '#app',
+        data: {
+            number: 0,
+            count: 0,
+            demo: 0,
+        },
+        methods: {
+            increment: function () {
+                this.number++;
+            },
+            incre: function () {
+                this.count++;
+            },
+            test: function () {
+                this.demo += 100;
+            },
+        }
+    })
+
+</script>
+
+</html>
